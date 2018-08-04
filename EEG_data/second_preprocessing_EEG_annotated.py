@@ -55,7 +55,10 @@ for i in range(14):
     epochs = '/Sub%d_preprocessed_epochs.fif' % (i)
     current_epochs = mne.read_epochs(epochs)
     df = current_epochs.to_data_frame(picks=None, scalings=None, scaling_time=scaling_time, index=index)  
-    df_all1 = df_all1.append(df)
+    if i == 1
+        df_all_epochs = df
+    else:
+        df_all1 = df_all1.append(df)
 
 df_all1.to_csv('/Volumes/INTENSO/DPX_EEG_fMRI/EEG/MNE/epochs/eeg_epochs.csv')
 
